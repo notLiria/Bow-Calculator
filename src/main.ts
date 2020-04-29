@@ -78,6 +78,8 @@ const Scene = (p: p5) => {
     const xHalfArc = Math.cos(theta / 2) * widthScale;
     const yHalfArc = Math.sin(theta / 2) * heightScale;
     p.text("L", xHalfArc + 0.05 * widthScale, yHalfArc);
+    console.log(bowDraw);
+    p.text("θ", bowDraw[0], 0);
   }
 
 };
@@ -121,9 +123,12 @@ function calc_radius() {
     document.getElementById("error").innerText = "";
     R = Calculations.find_root(DL, L, S);
     const p = Calculations.calc_p(R, t);
+    const theta = Calculations.calc_theta(DL, R, S)
     document.getElementById("radius").innerText =
       "R (in cm) : " + R.toString();
-    document.getElementById("p").innerText = "P (in cm) : " + p.toString();
+    document.getElementById("p").innerText = "P (in cm): " + p.toString();
+    document.getElementById("angle").innerText =
+        "θ (in degrees): " + theta.toString();
     scene.redraw();
   }
 }
