@@ -1,3 +1,7 @@
+function sign(number){
+  return number?number<0?-1:1:0;
+}
+
 export function check_values(drawLength: number, length: number, stringLength: number): boolean {
   return (drawLength * drawLength + ((length * length) / 4) - ((stringLength * stringLength) / 4)) > 0;
 }
@@ -10,11 +14,13 @@ export function find_root(drawLength: number, length: number, stringLength: numb
   const L = length;
   const allowableErr = 0.01;
   let r = DL;
-  let currValue = calc_value(DL, S, L, r);
-
-  while (Math.abs(currValue) > allowableErr && r < 5000) {
+  let prevValue = calc_value(DL, S, L, r);
+  let curValue = calc_value(DL, S, L, r);
+  // As you
+  while (sign(prevValue) === sign(curValue) && r < 5000) {
     r = r + allowableErr;
-    currValue = calc_value(DL, S, L, r);
+    prevValue = curValue;
+    curValue = calc_value(DL, S, L, r);
   }
   return r;
 }
