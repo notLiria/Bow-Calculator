@@ -4,9 +4,12 @@ import "./styles/main.scss";
 import p5 from "p5";
 
 const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
-const btn = document.getElementById("calc");
-const variables = document.querySelectorAll(".bow-input");
+//const btn = document.getElementById("calc");
+const variables = $$(".bow-input");
+const inchConverter = document.getElementById("inch");
+const cmConverter = document.getElementById("cm");
 const canvasHeight = 600;
 const canvasWidth = 600;
 
@@ -83,6 +86,8 @@ const Scene = (p: p5) => {
     const xHalfArc = Math.cos(theta / 2) * widthScale;
     const yHalfArc = Math.sin(theta / 2) * heightScale;
     p.text("L", xHalfArc + 0.05 * widthScale, yHalfArc);
+    console.log(bowDraw);
+    p.text("θ", bowDraw[0], 0);
   };
 };
 const scene = new p5(Scene);
@@ -96,6 +101,14 @@ variables.forEach((input) => {
     calc_radius();
   });
 });
+
+//btn.addEventListener("click", calc_radius);
+// variables.forEach((variable) => {
+//   variable.addEventListener("keyup", calc_radius);
+// });
+
+inchConverter.addEventListener("change", inchToCM);
+cmConverter.addEventListener("change", CMToInch);
 
 function calculatePoints(d, r, theta, widthScale, heightScale) {
   const scaleValues = (x, y) => [x * widthScale, y * heightScale];
@@ -129,11 +142,30 @@ function calc_radius() {
   if (!valid) {
     return error.removeAttribute("hidden");
   }
-
   error.setAttribute("hidden", "true");
   R = Calculations.find_root(DL, L, S);
   const p = Calculations.calc_p(R, t);
-  document.getElementById("radius").innerText = `${R.toFixed(3).toString()} cm`;
-  document.getElementById("p").innerText = `${p.toFixed(3).toString()} cm`;
+  const theta = Calculations.calc_theta(DL, R, S);
+  $("#radius").innerText = `${R.toFixed(3).toString()} cm`;
+  $("#p").innerText = `${p.toFixed(3).toString()} cm`;
+  $("#angle").innerText = `${theta.toFixed(3).toString()} θ`;
   scene.redraw();
+}
+
+function inchToCM() {
+  const inch = parseFloat(
+    (document.getElementById("inch") as HTMLInputElement).value
+  );
+  (document.getElementById("cm") as HTMLInputElement).value = (
+    inch * 2.54
+  ).toString();
+}
+
+function CMToInch() {
+  const cm = parseFloat(
+    (document.getElementById("cm") as HTMLInputElement).value
+  );
+  (document.getElementById("inch") as HTMLInputElement).value = (
+    cm / 2.54
+  ).toString();
 }
