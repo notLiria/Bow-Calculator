@@ -20,7 +20,7 @@
             />
           </p>
           <p>
-            <span>String length (In cm) </span>
+            <span>Total String length (In cm) </span>
             <input
               required
               type="number"
@@ -40,13 +40,13 @@
             />
           </p>
           <p>
-            <span>Tillering Gizmo (t) (In cm) </span>
+            <span>Tillering Gizmo (Total length) (In cm) </span>
             <input
               required
               type="number"
               id="tillering-gizmo"
               name="tillering-gizmo"
-              value="2"
+              value="6"
             />
           </p>
           <div id = "reference-div" style="width: 50%; float:left;">
@@ -58,14 +58,34 @@
           </div>
           <div id="dynamic-reference" style="width: 50%; float:right"></div>
         </div>
-        <button type="button" id="calc">Calculate</button>
+        <!--<button type="button" id="calc">Calculate</button>-->
         <div id="outputs">
           <p id="error"></p>
           <p id="radius"><span> R (in cm): 5.75</span></p>
           <p id="p"><span> P (in cm): 0.358</span></p>
+          <p id="angle"><span>θ (in degrees): </span></p>
         </div>
 
-
+        <div id = "conversion">
+          <p style="width: 50%; float: left">
+            <span>cm</span>
+            <input
+                    type="number"
+                    id="cm"
+                    name="cm"
+                    value="0"
+            />
+          </p>
+          <p style = "width: 50%; float:right">
+            <span>inch</span>
+            <input
+                    type="number"
+                    id="inch"
+                    name="inch"
+                    value="0"
+            />
+          </p>
+        </div>
         <!-- You can also require other files to run in this process -->
       </div>
     </div>
