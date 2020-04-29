@@ -3,68 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <title>Bow Calculator</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   </head>
   <body>
     <div class="container">
       <div class="controls">
-        <h1>Bow Calculator</h1>
-        <div id="known-variables">
-          <p>
-            <span>Length (In cm) </span>
-            <input
-              required
-              type="number"
-              id="length"
-              name="length"
-              value="10"
-            />
-          </p>
-          <p>
-            <span>String length (In cm) </span>
-            <input
-              required
-              type="number"
-              id="string-length"
-              name="string-length"
-              value="9"
-            />
-          </p>
-          <p>
-            <span>Draw Length (In cm) </span>
-            <input
-              required
-              type="number"
-              id="draw-length"
-              name="draw-length"
-              value="3"
-            />
-          </p>
-          <p>
-            <span>Tillering Gizmo (t) (In cm) </span>
-            <input
-              required
-              type="number"
-              id="tillering-gizmo"
-              name="tillering-gizmo"
-              value="2"
-            />
-          </p>
-          <div id = "reference-div" style="width: 50%; float:left;">
-          <img
-            src="img/reference.png"
-            alt="Measurement reference"
-            height="500"
-          />
-          </div>
-          <div id="dynamic-reference" style="width: 50%; float:right"></div>
-        </div>
-        <button type="button" id="calc">Calculate</button>
-        <div id="outputs">
-          <p id="error"></p>
-          <p id="radius"><span> R (in cm): 5.75</span></p>
-          <p id="p"><span> P (in cm): 0.358</span></p>
-        </div>
+        <h1 class="title">Liria's Sexy Bow Calculator</h1>
+        <div class="page-content">
+          <div class="inputs-outputs">
+            <div id="known-variables" class="card">
+              <div class="inputs">
+                <h2 class="input-label">Inputs</h2>
+                <div class="input-container">
+                  <div class="h-spaced">
+                    <label for="length">Bow Length</label>
+                    <span class="subtitle">In cm</span>
+                  </div>
+                  <input
+                    placeholder="Length"
+                    class="bow-input"
+                    required
+                    type="number"
+                    id="length"
+                    name="length"
+                    value="10"
+                  />
+                </div>
 
+                <div class="input-container">
+                  <div class="h-spaced">
+                    <label for="string-length">String Length</label>
+                    <span class="subtitle">In cm</span>
+                  </div>
+                  <input
+                    required
+                    type="number"
+                    class="bow-input"
+                    id="string-length"
+                    name="string-length"
+                    value="9"
+                  />
+                </div>
+                <div class="input-container">
+                  <div class="h-spaced">
+                    <label for="draw-length">Draw Length</label>
+                    <span class="subtitle">In cm</span>
+                  </div>
+                  <input
+                    required
+                    type="number"
+                    class="bow-input"
+                    id="draw-length"
+                    name="draw-length"
+                    value="3"
+                  />
+                </div>
+                <div class="input-container">
+                  <div class="h-spaced">
+                    <label for="tillering-gizmo">Tillering Gizmo (t)</label>
+                    <span class="subtitle">In cm</span>
+                  </div>
+                  <input
+                    required
+                    class="bow-input"
+                    type="number"
+                    id="tillering-gizmo"
+                    name="tillering-gizmo"
+                    value="2"
+                  />
+                </div>
+                <!-- <div id="reference-div" style="width: 50%; float: left;">
+              <img
+                src="img/reference.png"
+                alt="Measurement reference"
+                height="500"
+              />
+            </div> -->
+              </div>
+            </div>
+            <div class="card output-container" hidden>
+              <h2 class="input-label">Outputs</h2>
+              <div id="outputs">
+                <span class="output-label">Radius</span>
+                <span id="radius" class="output-value"></span>
+                <span class="output-label">P</span>
+                <span id="p" class="output-value"></span>
+              </div>
+              <span id="error" hidden>Your inputs are invalid</span>
+            </div>
+          </div>
+          <div id="dynamic-reference"></div>
+        </div>
 
         <!-- You can also require other files to run in this process -->
       </div>
