@@ -3,17 +3,14 @@ import "normalize.css";
 import "./styles/main.scss";
 import p5 from "p5"
 
-let btn = document.getElementById("calc");
-btn.addEventListener("click", calc_radius);
-
-
+const btn = document.getElementById("calc");
+const variables = document.getElementById("known-variables");
+const canvasHeight = 600;
+const canvasWidth = 600;
 
 let DL = 0;
 let L = 0;
 let R = 0;
-
-const canvasHeight = 600;
-const canvasWidth = 600;
 
 const Scene = (p: p5) => {
   p.setup = () => {
@@ -86,6 +83,9 @@ const Scene = (p: p5) => {
 };
 const scene = new p5(Scene)
 
+btn.addEventListener("click", calc_radius);
+variables.addEventListener('change', calc_radius);
+
 function calculatePoints(d, r, theta, widthScale, heightScale) {
   const scaleValues = (x, y) => [x * widthScale, y * heightScale];
 
@@ -97,7 +97,6 @@ function calculatePoints(d, r, theta, widthScale, heightScale) {
     bowDraw: scaleValues((r - d) / r, 0),
   };
 }
-
 
 function calc_radius() {
   L = parseFloat(
@@ -111,7 +110,7 @@ function calc_radius() {
   );
   const t = parseFloat(
     (document.getElementById("tillering-gizmo") as HTMLInputElement).value
-  );
+  ) / 2;
 
   // Check if the values make sense
   const valid = Calculations.check_values(DL, L, S);
