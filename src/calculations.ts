@@ -12,7 +12,7 @@ export function find_root(drawLength: number, length: number, stringLength: numb
   let r = DL;
   let currValue = calc_value(DL, S, L, r);
 
-  while (Math.abs(currValue) > allowableErr) {
+  while (Math.abs(currValue) > allowableErr && r < 5000) {
     r = r + allowableErr;
     currValue = calc_value(DL, S, L, r);
   }

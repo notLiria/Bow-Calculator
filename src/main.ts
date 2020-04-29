@@ -1,8 +1,11 @@
-import * as Calculations from "./calculations"
-
+import * as Calculations from "./calculations";
+import { Scene } from './scene';
+import * as p5 from 'p5';
 
 let btn = document.getElementById("calc");
 btn.addEventListener("click", calc_radius);
+
+
 
 function calc_radius() {
 
@@ -25,3 +28,5 @@ function calc_radius() {
     document.getElementById("p").innerText = "P (in cm) : " + p.toString();
   }
 }
+
+

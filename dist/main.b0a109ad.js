@@ -140,7 +140,7 @@ function find_root(drawLength, length, stringLength) {
   var r = DL;
   var currValue = calc_value(DL, S, L, r);
 
-  while (Math.abs(currValue) > allowableErr) {
+  while (Math.abs(currValue) > allowableErr && r < 5000) {
     r = r + allowableErr;
     currValue = calc_value(DL, S, L, r);
   }
@@ -230,7 +230,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50591" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52737" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

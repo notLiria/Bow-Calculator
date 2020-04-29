@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9d8dc95-9ed5-4694-98e1-0b8b2c5ca7f7" name="Default Changelist" comment="" />
+    <list default="true" id="d9d8dc95-9ed5-4694-98e1-0b8b2c5ca7f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scene.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/6d/9eed6dbbfe2e98ee04cf8cfb07479f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/6d/9eed6dbbfe2e98ee04cf8cfb07479f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9a/defb7e697ca2c4c8911535ac319215.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9a/defb7e697ca2c4c8911535ac319215.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/a3/3db7ef5052a22a356e0e0d358d0497.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/a3/3db7ef5052a22a356e0e0d358d0497.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/c2/f07ce32444d5f4986198d8b8a54376.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/c2/f07ce32444d5f4986198d8b8a54376.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/d4/78bd8012760cd253e4c2ebbb0916fb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/d4/78bd8012760cd253e4c2ebbb0916fb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.b0a109ad.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.b0a109ad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.b0a109ad.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.b0a109ad.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calculations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calculations.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculations.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calculations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +35,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bBdy8wjS8UIOU2ClsNwlW4ipb5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,8 +47,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bow-calc/dist/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -36,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588109672120</updated>
-      <workItem from="1588109673951" duration="2341000" />
+      <workItem from="1588109673951" duration="7303000" />
     </task>
     <servers />
   </component>
@@ -48,10 +84,16 @@
         <option value="$PROJECT_DIR$/src/calculations.js.map" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/calculations.js" />
+        <option value="$PROJECT_DIR$/src/draw.js" />
+        <option value="$PROJECT_DIR$/src/draw.js.map" />
       </list>
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="714" y="246" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588124612524">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="714" y="246" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/3840.-450.1080.1890/1920.23.1920.1050/-1200.-271.1200.1890/0.30.1920.1050@0.30.1920.1050" timestamp="1588124612524" />
     <state x="623" y="257" key="search.everywhere.popup" timestamp="1588111050712">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
