@@ -3,8 +3,10 @@ import "normalize.css";
 import "./styles/main.scss";
 import p5 from "p5"
 
-const btn = document.getElementById("calc");
+//const btn = document.getElementById("calc");
 const variables = document.getElementById("known-variables");
+const inchConverter = document.getElementById("inch");
+const cmConverter = document.getElementById("cm");
 const canvasHeight = 600;
 const canvasWidth = 600;
 
@@ -85,9 +87,10 @@ const Scene = (p: p5) => {
 };
 const scene = new p5(Scene)
 
-btn.addEventListener("click", calc_radius);
+//btn.addEventListener("click", calc_radius);
 variables.addEventListener('change', calc_radius);
-
+inchConverter.addEventListener('change', inchToCM);
+cmConverter.addEventListener('change', CMToInch);
 function calculatePoints(d, r, theta, widthScale, heightScale) {
   const scaleValues = (x, y) => [x * widthScale, y * heightScale];
 
@@ -132,5 +135,22 @@ function calc_radius() {
     scene.redraw();
   }
 }
+
+function inchToCM(){
+  const inch = parseFloat(
+      (document.getElementById("inch") as HTMLInputElement).value
+  );
+  (document.getElementById("cm") as HTMLInputElement).value =
+      (inch * 2.54).toString()
+}
+
+function CMToInch(){
+  const cm = parseFloat(
+      (document.getElementById("cm") as HTMLInputElement).value
+  );
+  (document.getElementById("inch") as HTMLInputElement).value =
+      (cm / 2.54).toString()
+}
+
 
 
