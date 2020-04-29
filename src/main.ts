@@ -96,7 +96,7 @@ const outputContainer = $(".output-container") as HTMLDivElement;
 
 // btn.addEventListener("click", calc_radius);
 variables.forEach((input) => {
-  input.addEventListener("keyup", () => {
+  input.addEventListener("change", () => {
     outputContainer.removeAttribute("hidden");
     calc_radius();
   });
@@ -138,12 +138,11 @@ function calc_radius() {
   const error = document.getElementById("error");
   // Check if the values make sense
   const valid = Calculations.check_values(DL, L, S);
-
-  if (!valid) {
+  R = Calculations.find_root(DL, L, S);
+  if (!valid || R > 5000) {
     return error.removeAttribute("hidden");
   }
   error.setAttribute("hidden", "true");
-  R = Calculations.find_root(DL, L, S);
   const p = Calculations.calc_p(R, t);
   const theta = Calculations.calc_theta(DL, R, S);
   $("#radius").innerText = `${R.toFixed(3).toString()} cm`;

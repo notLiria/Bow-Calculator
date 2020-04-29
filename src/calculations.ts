@@ -3,7 +3,12 @@ function sign(number){
 }
 
 export function check_values(drawLength: number, length: number, stringLength: number): boolean {
-  return (drawLength * drawLength + ((length * length) / 4) - ((stringLength * stringLength) / 4)) > 0;
+  if (drawLength > 0 && length > 0 && stringLength > 0) {
+    return (drawLength * drawLength + ((length * length) / 4) - ((stringLength * stringLength) / 4)) > 0;
+  }
+  else{
+    return false
+  }
 }
 
 export function find_root(drawLength: number, length: number, stringLength: number) {
